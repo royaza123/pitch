@@ -1,174 +1,183 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="he" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ePro AI Partnership</title>
+    <title>ePro AI - הצעת שותפות</title>
     <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        * {
             margin: 0;
-            padding: 20px;
-            background: #f9fafb;
-            color: #111827;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', 'Arial', sans-serif;
+            background: #ffffff;
+            color: #1a1a1a;
             line-height: 1.6;
+            direction: rtl;
         }
         
-        .slide {
-            background: white;
-            max-width: 900px;
-            margin: 0 auto 40px;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            min-height: 500px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
         }
         
-        .slide h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            color: #1f2937;
+        .header {
             text-align: center;
+            margin-bottom: 60px;
+            padding: 40px 0;
+            border-bottom: 3px solid #2563eb;
         }
         
-        .slide h2 {
-            font-size: 2em;
-            margin-bottom: 30px;
-            color: #1f2937;
-            border-bottom: 3px solid #3b82f6;
-            padding-bottom: 10px;
+        .header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 16px;
         }
         
-        .slide h3 {
-            font-size: 1.5em;
-            margin-bottom: 20px;
-            color: #374151;
+        .header p {
+            font-size: 1.4rem;
+            color: #64748b;
+            max-width: 600px;
+            margin: 0 auto;
         }
         
-        .big-stat {
-            text-align: center;
-            margin: 30px 0;
-        }
-        
-        .big-number {
-            font-size: 4em;
-            font-weight: bold;
-            color: #3b82f6;
-            line-height: 1;
-        }
-        
-        .big-label {
-            font-size: 1.3em;
-            color: #6b7280;
-            margin-top: 10px;
-        }
-        
-        .two-column {
+        .grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 40px;
-            margin: 30px 0;
+            margin-bottom: 60px;
         }
         
-        .before-after {
+        .grid-3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
             padding: 30px;
-            border-radius: 8px;
+        }
+        
+        .card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #2563eb;
+        }
+        
+        .section {
+            margin-bottom: 60px;
+        }
+        
+        .section h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 30px;
             text-align: center;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #2563eb;
         }
         
-        .before {
-            background: #fef2f2;
-            border: 2px solid #fca5a5;
-        }
-        
-        .after {
-            background: #f0fdf4;
-            border: 2px solid #86efac;
-        }
-        
-        .before h4 {
-            color: #dc2626;
-            font-size: 1.3em;
-            margin-bottom: 20px;
-        }
-        
-        .after h4 {
-            color: #16a34a;
-            font-size: 1.3em;
-            margin-bottom: 20px;
-        }
-        
-        .bullet-points {
-            font-size: 1.2em;
-            line-height: 1.8;
-        }
-        
-        .bullet-points li {
-            margin: 15px 0;
-        }
-        
-        .highlight {
-            background: #fef3c7;
-            padding: 20px;
-            border-radius: 8px;
+        .table {
+            width: 100%;
+            border-collapse: collapse;
             margin: 20px 0;
-            border-left: 4px solid #f59e0b;
-        }
-        
-        .revenue-box {
-            background: #eff6ff;
-            border: 2px solid #3b82f6;
-            border-radius: 12px;
-            padding: 30px;
-            text-align: center;
-            margin: 30px 0;
-        }
-        
-        .revenue-box h4 {
-            color: #1e40af;
-            font-size: 1.5em;
-            margin-bottom: 20px;
-        }
-        
-        .price-table {
             background: white;
-            border: 1px solid #e5e7eb;
             border-radius: 8px;
             overflow: hidden;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .table th,
+        .table td {
+            padding: 15px;
+            text-align: right;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .table th {
+            background: #f1f5f9;
+            font-weight: 600;
+            color: #475569;
+        }
+        
+        .table tr:hover {
+            background: #f8fafc;
+        }
+        
+        .stat-box {
+            background: #dbeafe;
+            border: 2px solid #2563eb;
+            border-radius: 8px;
+            padding: 25px;
+            text-align: center;
             margin: 20px 0;
         }
         
-        .price-table th,
-        .price-table td {
-            padding: 15px;
-            text-align: left;
-            border-bottom: 1px solid #e5e7eb;
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1d4ed8;
+            margin-bottom: 8px;
         }
         
-        .price-table th {
-            background: #f9fafb;
-            font-weight: 600;
+        .stat-label {
+            font-size: 1.1rem;
+            color: #475569;
         }
         
-        .demo-flow {
+        .highlight-box {
+            background: #fef3c7;
+            border: 1px solid #f59e0b;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 25px 0;
+        }
+        
+        .list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #e2e8f0;
+            font-size: 1.1rem;
+        }
+        
+        .list li:last-child {
+            border-bottom: none;
+        }
+        
+        .process-steps {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 20px;
             margin: 30px 0;
         }
         
-        .demo-step {
+        .step {
             text-align: center;
             padding: 20px;
-            background: #f8fafc;
+            background: #f1f5f9;
             border-radius: 8px;
+            border: 1px solid #cbd5e1;
         }
         
-        .demo-step .step-number {
-            background: #3b82f6;
+        .step-number {
+            background: #2563eb;
             color: white;
             width: 40px;
             height: 40px;
@@ -177,299 +186,419 @@
             align-items: center;
             justify-content: center;
             margin: 0 auto 15px;
-            font-weight: bold;
+            font-weight: 700;
         }
         
-        .simple-list {
-            font-size: 1.1em;
-            line-height: 2;
+        .tier-box {
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 20px 0;
+            background: white;
         }
         
-        .simple-list li {
-            margin: 10px 0;
+        .tier-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 15px;
+            text-align: center;
+            padding: 10px;
+            background: #f1f5f9;
+            border-radius: 6px;
         }
         
         @media (max-width: 768px) {
-            .two-column,
-            .demo-flow {
+            .grid,
+            .grid-3,
+            .process-steps {
                 grid-template-columns: 1fr;
                 gap: 20px;
             }
             
-            .slide {
-                padding: 20px;
-                margin-bottom: 20px;
+            .header h1 {
+                font-size: 2rem;
             }
             
-            .slide h1 {
-                font-size: 2em;
+            .section h2 {
+                font-size: 1.8rem;
             }
             
-            .slide h2 {
-                font-size: 1.5em;
+            .container {
+                padding: 20px 10px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Slide 1: Title -->
-    <div class="slide">
-        <h1>🚀 ePro AI Partnership</h1>
-        <div class="big-stat">
-            <div style="font-size: 1.5em; color: #374151; margin-bottom: 30px;">
-                The tool that turns your 700 students into<br>
-                <strong>Etsy listing machines</strong>
-            </div>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>🚀 ePro AI - הצעת שותפות</h1>
+            <p><strong>הפתרון שיחסוך לתלמידיך 25+ שעות שבועיות ויהפוך אותם למכונות רישום Etsy</strong></p>
         </div>
-        <div style="text-align: center; font-size: 1.2em; color: #6b7280;">
-            Exclusive early access partnership proposal
-        </div>
-    </div>
 
-    <!-- Slide 2: The Problem -->
-    <div class="slide">
-        <h2>❌ The Problem Your Students Face Daily</h2>
-        <div class="two-column">
-            <div class="before">
-                <h4>Current Reality</h4>
-                <ul class="simple-list" style="list-style: none; padding: 0;">
-                    <li>📝 30-45 minutes per listing</li>
-                    <li>⏰ 35-40 hours/week on listings</li>
-                    <li>💸 $300-400/month for VAs</li>
-                    <li>😤 Burnout from repetitive work</li>
-                    <li>🐌 Can't scale fast enough</li>
-                </ul>
-            </div>
-            <div style="display: flex; align-items: center; justify-content: center; font-size: 3em;">
-                →
+        <!-- Problem & Solution -->
+        <div class="section">
+            <h2>💡 הבעיה והפתרון</h2>
+            <div class="grid">
+                <div class="card" style="background: #fef2f2; border-color: #fca5a5;">
+                    <h3 style="color: #dc2626; border-color: #dc2626;">❌ המצב הנוכחי של התלמידים</h3>
+                    <ul class="list">
+                        <li><strong>30-45 דקות</strong> ליצירת רישום אחד</li>
+                        <li><strong>35-40 שעות שבועיות</strong> על יצירת רישומים</li>
+                        <li><strong>300-400$ חודשיות</strong> על עוזרים וירטואליים</li>
+                        <li><strong>שחיקה נפשית</strong> מעבודה חוזרת ונשנית</li>
+                        <li><strong>אי יכולת להגיע לסקייל</strong> מהיר מספיק</li>
+                    </ul>
+                </div>
+                <div class="card" style="background: #f0fdf4; border-color: #86efac;">
+                    <h3 style="color: #16a34a; border-color: #16a34a;">✅ עם ePro AI</h3>
+                    <ul class="list">
+                        <li><strong>2 דקות</strong> ליצירת רישום מקצועי</li>
+                        <li><strong>SEO אופטימלי</strong> ספציפי לEtsy</li>
+                        <li><strong>תבניות שירות לקוחות</strong> מוכנות</li>
+                        <li><strong>70-150$ חודשיות</strong> עלות כוללת</li>
+                        <li><strong>25+ שעות שבועיות</strong> חסכון זמן</li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <div class="highlight">
-            <strong>Bottom line:</strong> Your students are spending $2,000+ monthly in time and VA costs just to get products listed, while competitors scale faster with automation.
-        </div>
-    </div>
 
-    <!-- Slide 3: The Solution -->
-    <div class="slide">
-        <h2>✅ What ePro AI Solves</h2>
-        <div class="big-stat">
-            <div class="big-number">2 min</div>
-            <div class="big-label">Per professional listing<br>(vs 30+ minutes manual)</div>
-        </div>
-        
-        <div class="two-column">
-            <div class="after">
-                <h4>With ePro AI</h4>
-                <ul class="simple-list" style="list-style: none; padding: 0;">
-                    <li>⚡ 2 minutes per listing</li>
-                    <li>🎯 AI-optimized for Etsy SEO</li>
-                    <li>💬 Customer service templates included</li>
-                    <li>💰 $70-150/month total cost</li>
-                    <li>🚀 25+ hours saved weekly</li>
-                </ul>
+        <!-- Token System -->
+        <div class="section">
+            <h2>🪙 מערכת הטוקנים</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>חבילה</th>
+                        <th>טוקנים</th>
+                        <th>מחיר ($)</th>
+                        <th>מחיר לטוקן</th>
+                        <th>זכאות להפניה</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Taster</td>
+                        <td>5</td>
+                        <td>$9.99</td>
+                        <td>$2.00</td>
+                        <td>❌ לא</td>
+                    </tr>
+                    <tr>
+                        <td>Starter</td>
+                        <td>20</td>
+                        <td>$30.00</td>
+                        <td>$1.50</td>
+                        <td>✅ כן</td>
+                    </tr>
+                    <tr>
+                        <td>Growth</td>
+                        <td>50</td>
+                        <td>$70.00</td>
+                        <td>$1.40</td>
+                        <td>✅ כן</td>
+                    </tr>
+                    <tr>
+                        <td>Pro</td>
+                        <td>120</td>
+                        <td>$150.00</td>
+                        <td>$1.25</td>
+                        <td>✅ כן</td>
+                    </tr>
+                    <tr>
+                        <td>Agency</td>
+                        <td>300</td>
+                        <td>$360.00</td>
+                        <td>$1.20</td>
+                        <td>✅ כן</td>
+                    </tr>
+                    <tr>
+                        <td>Enterprise</td>
+                        <td>1,000</td>
+                        <td>$1,000.00</td>
+                        <td>$1.00</td>
+                        <td>✅ כן</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="grid">
+                <div class="card">
+                    <h3>שימוש בטוקנים</h3>
+                    <ul class="list">
+                        <li><strong>רישום רגיל:</strong> 2 טוקנים (5 תמונות + טקסט)</li>
+                        <li><strong>רישום פרימיום:</strong> 5 טוקנים (8 תמונות + טקסט + וידאו)</li>
+                        <li><strong>תבניות שירות לקוחות:</strong> כלולות בחינם</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>כללי הבונוסים</h3>
+                    <ul class="list">
+                        <li><strong>טוקנים חינמיים:</strong> פג תוקף אחרי 45 יום</li>
+                        <li><strong>נעילה:</strong> 72 שעות לפני השימוש</li>
+                        <li><strong>מקסימום חינמיים:</strong> 50 טוקנים לחשבון</li>
+                    </ul>
+                </div>
             </div>
-            <div>
-                <h3>What It Actually Does:</h3>
-                <ul class="simple-list">
-                    <li>Creates optimized titles & tags</li>
-                    <li>Writes conversion-focused descriptions</li>
-                    <li>Handles variations (size/color/material)</li>
-                    <li>Generates customer service responses</li>
-                    <li>Built specifically for Etsy psychology</li>
-                </ul>
-            </div>
         </div>
-    </div>
 
-    <!-- Slide 4: Live Demo Flow -->
-    <div class="slide">
-        <h2>🎬 How the Live Demo Works</h2>
-        <p style="font-size: 1.2em; margin-bottom: 30px;">Show your students this 4-step transformation:</p>
-        
-        <div class="demo-flow">
-            <div class="demo-step">
-                <div class="step-number">1</div>
-                <h4>Upload</h4>
-                <p>Student gives you a product URL</p>
-            </div>
-            <div class="demo-step">
-                <div class="step-number">2</div>
-                <h4>Generate</h4>
-                <p>ePro AI creates complete listing in 2 minutes</p>
-            </div>
-            <div class="demo-step">
-                <div class="step-number">3</div>
-                <h4>Review</h4>
-                <p>Show the professional title, tags, description</p>
-            </div>
-            <div class="demo-step">
-                <div class="step-number">4</div>
-                <h4>Mind Blown</h4>
-                <p>Students realize they just saved 28+ minutes</p>
-            </div>
-        </div>
-        
-        <div class="highlight">
-            <strong>The magic moment:</strong> When students see that 2-minute listing is <em>better</em> than what they'd create in 30 minutes manually.
-        </div>
-    </div>
-
-    <!-- Slide 5: Commission Structure -->
-    <div class="slide">
-        <h2>💰 Your Revenue Structure</h2>
-        
-        <table class="price-table" style="width: 100%;">
-            <tr>
-                <th>Commission Type</th>
-                <th>Rate</th>
-                <th>Details</th>
-            </tr>
-            <tr>
-                <td><strong>Direct Sales</strong></td>
-                <td>12%</td>
-                <td>On all student purchases through your link</td>
-            </tr>
-            <tr>
-                <td><strong>Mentor Override</strong></td>
-                <td>3%</td>
-                <td>When your mentors drive sales</td>
-            </tr>
-            <tr>
-                <td><strong>Retention Bonus</strong></td>
-                <td>+5%</td>
-                <td>When students make their 3rd purchase</td>
-            </tr>
-        </table>
-        
-        <div class="revenue-box">
-            <h4>Conservative Revenue Projection</h4>
-            <div style="font-size: 1.3em; margin: 20px 0;">
-                <strong>200 students adopt × $100 avg monthly = $20,000 monthly volume</strong>
-            </div>
-            <div class="big-number" style="font-size: 2.5em;">$2,400</div>
-            <div style="font-size: 1.2em; color: #1e40af;">Monthly recurring commission</div>
-            <div style="font-size: 1em; color: #6b7280; margin-top: 10px;">
-                Plus $800 in volume bonuses when you hit milestones
-            </div>
-        </div>
-    </div>
-
-    <!-- Slide 6: Token Economics -->
-    <div class="slide">
-        <h2>🪙 Simple Token System</h2>
-        
-        <table class="price-table" style="width: 100%;">
-            <tr>
-                <th>Package</th>
-                <th>Tokens</th>
-                <th>Price</th>
-                <th>Per Token</th>
-            </tr>
-            <tr>
-                <td>Starter</td>
-                <td>20</td>
-                <td>$30</td>
-                <td>$1.50</td>
-            </tr>
-            <tr>
-                <td>Growth</td>
-                <td>50</td>
-                <td>$70</td>
-                <td>$1.40</td>
-            </tr>
-            <tr>
-                <td>Pro</td>
-                <td>120</td>
-                <td>$150</td>
-                <td>$1.25</td>
-            </tr>
-            <tr>
-                <td>Agency</td>
-                <td>300</td>
-                <td>$360</td>
-                <td>$1.20</td>
-            </tr>
-        </table>
-        
-        <div class="two-column" style="margin-top: 30px;">
-            <div>
-                <h3>Usage:</h3>
-                <ul class="simple-list">
-                    <li><strong>Standard listing:</strong> 2 tokens</li>
-                    <li><strong>Premium listing:</strong> 5 tokens</li>
-                    <li>(Includes images, text, customer service templates)</li>
-                </ul>
-            </div>
-            <div>
-                <h3>Student Benefits:</h3>
-                <ul class="simple-list">
-                    <li>20 free tokens on signup</li>
-                    <li>Early access pricing</li>
-                    <li>Personal setup support</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <!-- Slide 7: Why This Partnership Works -->
-    <div class="slide">
-        <h2>🤝 Why This Is Perfect for You</h2>
-        
-        <div class="bullet-points">
-            <ul>
-                <li><strong>Genuine value:</strong> Actually solves your students' #1 time-wasting problem</li>
-                <li><strong>Recurring revenue:</strong> Students use tokens monthly, not one-time purchase</li>
-                <li><strong>Easy positioning:</strong> "The tool I use daily in my own business"</li>
-                <li><strong>No competition:</strong> First partnership of this type for the tool</li>
-                <li><strong>Your expertise:</strong> Million-dollar seller recommending what actually works</li>
-            </ul>
-        </div>
-        
-        <div class="highlight">
-            <strong>The positioning writes itself:</strong> "This is how I'd build my entire store today if I was starting over. You're getting exclusive early access to the exact system I use daily."
-        </div>
-    </div>
-
-    <!-- Slide 8: Next Steps -->
-    <div class="slide">
-        <h2>🚀 What Happens Next</h2>
-        
-        <div class="two-column">
-            <div>
-                <h3>Week 1:</h3>
-                <ul class="simple-list">
-                    <li>Set up your tracking links</li>
-                    <li>Create your positioning message</li>
-                    <li>Schedule live demo call</li>
-                </ul>
+        <!-- Commission Structure -->
+        <div class="section">
+            <h2>💰 מבנה העמלות</h2>
+            
+            <div class="grid-3">
+                <div class="tier-box">
+                    <div class="tier-title">👑 בעל הקורס (רמה 1)</div>
+                    <ul class="list">
+                        <li><strong>12% עמלה</strong> על כל קנייה ישירה</li>
+                        <li><strong>3% עמלה עליונה</strong> על מכירות מנטורים</li>
+                        <li><strong>5% בונוס שימור</strong> בקנייה השלישית</li>
+                    </ul>
+                    
+                    <div class="stat-box">
+                        <div class="stat-number">$300</div>
+                        <div class="stat-label">בונוס ב-100 רישומים</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">$500</div>
+                        <div class="stat-label">בונוס ב-200 רישומים</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number">$1,000</div>
+                        <div class="stat-label">בונוס ב-300 רישומים</div>
+                    </div>
+                </div>
                 
-                <h3>Week 2:</h3>
-                <ul class="simple-list">
-                    <li>Send pre-call positioning email</li>
-                    <li>Deliver live demonstration</li>
-                    <li>Start follow-up sequence</li>
-                </ul>
-            </div>
-            <div>
-                <h3>Week 3+:</h3>
-                <ul class="simple-list">
-                    <li>Student onboarding support</li>
-                    <li>Track performance & optimize</li>
-                    <li>Monthly commission payments</li>
-                </ul>
+                <div class="tier-box">
+                    <div class="tier-title">🧑‍🏫 מנטורים (רמה 2)</div>
+                    <ul class="list">
+                        <li><strong>8% עמלה</strong> על תלמידים שהם הפנו</li>
+                        <li><strong>זכאות ללוח תוצאות</strong> עם תנאים</li>
+                        <li><strong>דרישה:</strong> $1,000+ מכירות חודשיות</li>
+                    </ul>
+                    
+                    <div class="highlight-box">
+                        <strong>לוח התוצאות החודשי:</strong>
+                        <ul style="margin-top: 15px;">
+                            <li>🥇 מקום 1: $200 + תגית "מנטור החודש"</li>
+                            <li>🥈 מקום 2: $100 בונוס</li>
+                            <li>🥉 מקום 3: $50 + אזכור ציבורי</li>
+                        </ul>
+                    </div>
+                </div>
                 
-                <h3>Support You Get:</h3>
-                <ul class="simple-list">
-                    <li>All demo scripts provided</li>
-                    <li>Email templates ready</li>
-                    <li>Personal student support</li>
-                    <li>Real-time tracking dashboard</li>
-                </ul>
+                <div class="tier-box">
+                    <div class="tier-title">🎓 תלמידים (רמה 3)</div>
+                    <ul class="list">
+                        <li><strong>אין עמלות כספיות</strong> (מצוקה כספית)</li>
+                        <li><strong>10 טוקנים חינמיים</strong> עבור הפניית חבר</li>
+                        <li><strong>5 טוקנים נאמנות</strong> על כל $100 הוצאה</li>
+                    </ul>
+                    
+                    <div class="highlight-box">
+                        <strong>תוכנית שגרירים:</strong><br>
+                        דרישות: $500 הוצאה כוללת + $50 חודשיות<br>
+                        יתרונות: 8% עמלה כמו מנטורים
+                    </div>
+                </div>
             </div>
         </div>
-        
-        <div style="text-align: center; margin-top: 40px; font-size: 1.3em;">
-            <strong>Ready to give your students their time back while building recurring revenue?</strong>
+
+        <!-- Admin Structure -->
+        <div class="section">
+            <h2>📊 מבנה הניהול והמעקב</h2>
+            
+            <div class="grid">
+                <div class="card">
+                    <h3>דשבורד בעל הקורס</h3>
+                    <ul class="list">
+                        <li>סה"כ רישומים מאומתים</li>
+                        <li>הכנסות כוללות ועמלות</li>
+                        <li>פירוט לפי מנטור</li>
+                        <li>רווחי עמלה עליונה ממנטורים</li>
+                        <li>התקדמות בונוסי נפח</li>
+                        <li>יצוא CSV או צפייה ב-Firestore</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>דשבורד מנטורים</h3>
+                    <ul class="list">
+                        <li>מעקב רישומים וקניות תלמידים</li>
+                        <li>סיכומי עמלות</li>
+                        <li>דירוג בלוח התוצאות</li>
+                        <li>תובנות פעילות תלמידים</li>
+                        <li>התראה אוטומטית לסטטוס שגריר תלמיד</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>לוח תוצאות ציבורי למנטורים</h3>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>דירוג</th>
+                            <th>מנטור</th>
+                            <th>רישומים מאומתים</th>
+                            <th>הכנסות טוקנים</th>
+                            <th>פעיל לאחרונה</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>🥇</td>
+                            <td>שרה ל.</td>
+                            <td>34</td>
+                            <td>$2,230</td>
+                            <td>לפני שעתיים</td>
+                        </tr>
+                        <tr>
+                            <td>🥈</td>
+                            <td>יעקב ת.</td>
+                            <td>29</td>
+                            <td>$1,730</td>
+                            <td>היום</td>
+                        </tr>
+                        <tr>
+                            <td>🥉</td>
+                            <td>מיכל ר.</td>
+                            <td>22</td>
+                            <td>$1,220</td>
+                            <td>אתמול</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p style="margin-top: 15px; color: #64748b;">* מציג רק מנטורים עם $1,000+ מכירות חודשיות | מתעדכן כל 6 שעות</p>
+            </div>
+        </div>
+
+        <!-- Student Bonuses -->
+        <div class="section">
+            <h2>🎁 מבנה הבונוסים לתלמידים</h2>
+            
+            <div class="grid">
+                <div class="card">
+                    <h3>בונוס רישום (אוטומטי)</h3>
+                    <ul class="list">
+                        <li><strong>20 טוקנים חינמיים</strong> ברישום</li>
+                        <li>מספיק ל-10 רישומים רגילים או 4 פרימיום</li>
+                        <li>נעילה של 72 שעות</li>
+                        <li>פג תוקף אחרי 45 יום</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>כללי הצטברות בונוסים</h3>
+                    <ul class="list">
+                        <li><strong>בונוס רישום + קופון:</strong> ✅ מותר</li>
+                        <li><strong>בונוס הפניה + נאמנות:</strong> ✅ מותר</li>
+                        <li><strong>2 קופונים יחד:</strong> ❌ אסור</li>
+                        <li><strong>יותר מ-50 טוקנים חינמיים:</strong> ❌ אסור</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Launch Process -->
+        <div class="section">
+            <h2>🚀 תהליך ההשקה</h2>
+            
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h4>שבוע 1</h4>
+                    <p>יצירת תוכן, הקמה טכנית, הודעות טרום השקה</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h4>שבוע 2</h4>
+                    <p>אימייל מיקום → שיחת הדגמה חיה → רצף מעקב</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h4>שבוע 3-4</h4>
+                    <p>קליטת תלמידים, מעקב ביצועים, שיפור אסטרטגיה</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h4>שוטף</h4>
+                    <p>שיחות אופטימיזציה חודשיות, עדכוני פיצ'רים, צמיחה</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Revenue Projection -->
+        <div class="section">
+            <h2>📈 תחזית הכנסות</h2>
+            
+            <div class="grid">
+                <div class="stat-box">
+                    <div class="stat-number">200</div>
+                    <div class="stat-label">תלמידים מאמצים (28% מהבסיס)</div>
+                    <div style="margin-top: 20px; font-size: 1.1rem;">
+                        <strong>$100 ממוצע חודשי × 200 = $20,000 נפח חודשי</strong>
+                    </div>
+                    <div class="stat-number" style="font-size: 2rem; margin-top: 20px;">$2,400</div>
+                    <div class="stat-label">עמלה חודשית חוזרת</div>
+                    <div class="stat-number" style="font-size: 1.5rem; margin-top: 15px;">$28,800</div>
+                    <div class="stat-label">הכנסה שנתית</div>
+                </div>
+                
+                <div class="stat-box">
+                    <div class="stat-number">400</div>
+                    <div class="stat-label">תרחיש צמיחה (57% מהבסיס)</div>
+                    <div style="margin-top: 20px; font-size: 1.1rem;">
+                        <strong>$100 ממוצע חודשי × 400 = $40,000 נפח חודשי</strong>
+                    </div>
+                    <div class="stat-number" style="font-size: 2rem; margin-top: 20px;">$4,800</div>
+                    <div class="stat-label">עמלה חודשית חוזרת</div>
+                    <div class="stat-number" style="font-size: 1.5rem; margin-top: 15px;">$57,600</div>
+                    <div class="stat-label">הכנסה שנתית</div>
+                </div>
+            </div>
+            
+            <div class="highlight-box">
+                <strong>בנוסף:</strong> בונוסי נפח עד $1,000 עבור השגת אבני דרך + עמלות עליונות מהמנטורים
+            </div>
+        </div>
+
+        <!-- Safeguards -->
+        <div class="section">
+            <h2>🛡️ הגנות ומניעת זלזול</h2>
+            
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>אזור סיכון</th>
+                        <th>הגנה</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>הפניות מזויפות</td>
+                        <td>מעקב מכשיר/IP, מגבלת הפניה אחת לחשבון</td>
+                    </tr>
+                    <tr>
+                        <td>אגירת בונוסים</td>
+                        <td>מגבלת 50 טוקנים + פגיעת תוקף 45 יום + נעילה 72 שעות</td>
+                    </tr>
+                    <tr>
+                        <td>זלזול החזרים</td>
+                        <td>ביטול אוטומטי של בונוסים ועמלות</td>
+                    </tr>
+                    <tr>
+                        <td>זלזול קופונים מוערמים</td>
+                        <td>מקסימום קופון אחד לקנייה</td>
+                    </tr>
+                    <tr>
+                        <td>חשבונות חינמיים בלבד</td>
+                        <td>אין גישה ללוח תוצאות, אין תשלום הפניות</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </body>
